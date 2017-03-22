@@ -1,0 +1,26 @@
+<div class="container">
+   <div class="row">
+      <div class="col-xs-12 col-sm-6">
+         <div class="well">
+            Hello, <%= capitalize(@name) %>
+         </div>
+      </div>
+      <div class="col-xs-12 col-sm-6" style="font-size:36px;">
+         <span class="glyphicon glyphicon-asterisk"></span>
+      </div>
+   </div>
+
+   <div class="row">
+      <div class="col-xs-6">
+         <ul>
+            <%= for key <- connection_keys(@conn) do %>
+               <li><%= key %></li>
+            <% end %>
+         </ul>
+      </div>
+      
+      <div class="col-xs-6">
+         <%= handler_info @conn %>
+      </div>
+   </div>
+</div>

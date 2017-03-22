@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  <h2>Splash</h2>
+  <p class="lead">
+    Now is the time for all good men to come to the 
+    aid of their country.
+  </p>
+</div>
+
+<div class="container">
+   <%= if true do %>
+  In Vino Veritas
+<% else %>
+  This will never appear
+<% end %>
+</div>

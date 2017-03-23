@@ -11,9 +11,9 @@ config :logger, level: :warn
 
 # Configure your database
 config :chs, Chs.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "runner",
-  password: "semaphoredb",
-  database: "chs_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
+     adapter: Ecto.Adapters.Postgres,
+     database: System.get_env("POSTGRES_DB")       || "chs_test",
+     username: System.get_env("POSTGRES_USER")     || "postgres",
+     password: System.get_env("POSTGRES_PASSWORD") || "postgres",
+     hostname: System.get_env("DB_HOST")           || "localhost",
+     pool: Ecto.Adapters.SQL.Sandbox

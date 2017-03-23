@@ -1,7 +1,7 @@
 defmodule Chs.LayoutView do
   use Chs.Web, :view
   
-  def page_title do
+  def page_title do da
     Timex.format!(Timex.now("America/Chicago"), "{h12}:{m}:{s} {am}")
   end
   

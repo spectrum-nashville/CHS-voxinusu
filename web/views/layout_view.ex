@@ -40,6 +40,7 @@ defmodule Chs.LayoutView do
               </li>
               <li#{actives[:msplash]}><a href="/splash">Splash</a></li>
               <li#{actives[:mhello]}><a href="/cat">Hello</a></li>
+              <li#{actives[:mhello]}><a href="/users">Users</a></li>
               <!-- <li><a href="#">#{selected}:#{action_name( conn )}</a></li> -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -50,29 +51,7 @@ defmodule Chs.LayoutView do
         </div>
       </nav>
 
-   <!---
-        <nav role="navigation" class="navbar navbar-default">
-           <div class="container">
-             <ul class="nav navbar-nav">
-               <li>
-                  <a#{actives[:mhome]} class="active" href="/">Home</a>
-               </li>
-               <li>
-                  <a#{actives[:mphoenix]} href="http://www.phoenixframework.org/docs" target="_blank">Phoenix</a>
-               </li>
-               <<li>
-                  <a#{actives[:msplash]} href="/splash">Splash</a>
-               </li>
-               <li>
-                  <a#{actives[:mhello]} href="/cat">Cat/Hello</a>
-               </li>
-               <li>
-                  <a href="#">#{action_name( conn )}</a>
-               </li>
-             </ul>
-           </div>
-        </nav>
-    --->
+   
    """
    }
    end

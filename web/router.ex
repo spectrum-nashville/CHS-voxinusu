@@ -20,6 +20,9 @@ defmodule Chs.Router do
     get "/splash", PageController, :splash
     get "/cat", CatController, :hello
     get "/cat/:name", CatController, :hello
+    
+    resources "/users", UserController
+
   end
 
   # Other scopes may use custom stacks.

@@ -1,19 +1,20 @@
 defmodule Chs.LayoutView do
+
   use Chs.Web, :view
-  
+
   def page_title do
-    Timex.format!(Timex.now("America/Chicago"), "{h12}:{m}:{s} {am}")
+    Timex.format!(Timex.now("America/Chicago"), "{h12}:{s} {am}")
   end
-  
+
   def mainmenu(conn) do
    selected = to_string(action_name( conn ))
-   actives = 
+   actives =
       case selected do
         "hello" -> %{ :mhome => "", :mphoenix => "", :msplash => "", :mhello => " class=\"active\"" }
         "splash" -> %{ :mhome => "", :mphoenix => "", :msplash => " class=\"active\"", :mhello => "" }
          _ -> %{ :mhome => " class=\"active\"", :mphoenix => "", :msplash => "", :mhello => "" }
       end
-   
+
   { :safe,
    """
 
@@ -23,7 +24,7 @@ defmodule Chs.LayoutView do
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-              <span class="icon-bar"></span>                        
+              <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">WebSiteName</a>
           </div>
@@ -51,7 +52,7 @@ defmodule Chs.LayoutView do
         </div>
       </nav>
 
-   
+
    """
    }
    end

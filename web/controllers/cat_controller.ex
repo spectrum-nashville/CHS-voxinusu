@@ -6,6 +6,7 @@ defmodule Chs.CatController do
   end
   
   def hello(conn, _params) do
+   inspect _params
     render conn, "hello.html", %{ name: "world"}
   end
   

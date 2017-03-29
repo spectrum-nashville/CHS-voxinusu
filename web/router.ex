@@ -18,12 +18,13 @@ defmodule Chs.Router do
 
     get "/", PageController, :index
     get "/splash", PageController, :splash
-    get "/cat", CatController, :hello
+    get "/cat", CatController, :hello, [%{"name" => "tomcat"}]
     get "/cat/:name", CatController, :hello
     
     resources "/users", UserController
 
   end
+  
 
   # Other scopes may use custom stacks.
   # scope "/api", Chs do
